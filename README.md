@@ -2,7 +2,8 @@
 
 ## Overview
 
-The `AutoComplete` component is a flexible and customizable autocomplete input field built with React. It includes features such as searching, filtering, and selection of items, and supports loading and error states.
+The `AutoComplete` component is a flexible and customizable autocomplete input field built with React. It includes
+features such as searching, filtering, and selection of items, delete of selected item or search value, and supports loading and error states.
 
 ## Features
 
@@ -17,11 +18,21 @@ The `AutoComplete` component is a flexible and customizable autocomplete input f
 
 The project directory is organized as follows:
 
-**public/**
-- `index.html`: The main HTML file for the project.
-- `favicon.ico`: The favicon for the project.
-
 **src/**
+
+- **hooks/**
+    - `useDebounce.ts`: A custom hook for debouncing user input.
+    - `useOutsideClick.tsx`: A custom hook for detecting clicks outside a component.
+  
+- **apis/**-
+    - **hooks/**
+        - `useFetchCountries.tsx`: Api hook for fetching data based on query string
+        - `useFetchAllCountries.tsx`: Api hook for fetching all countries from backend and filtering data in frontend
+          side based on query.
+    - **types/**
+        - `country.types.ts`: TypeScript types for API responses.
+        - `general.types.ts`: General types related to types for API responses.
+
 - **components/**
     - **Autocomplete/**
         - `index.tsx`: The main autocomplete component.
@@ -31,19 +42,9 @@ The project directory is organized as follows:
         - `AutocompleteLoading/index.tsx`: The loading indicator component.
         - `AutocompleteEmptyState/index.tsx`: The component shown when there are no items.
         - `AutocompleteErrorState/index.tsx`: The component for displaying error messages.
-    - **hooks/**
-        - `useDebounce.ts`: A custom hook for debouncing user input.
-        - `useOutsideClick.tsx`: A custom hook for detecting clicks outside a component.
-
-- **apis/**
-    - **types/**
-        - `country.types.ts`: TypeScript types for API responses.
-        - `general.types.ts`: General types related to types for API responses.
-
 - `App.tsx`: The main application component.
 - `index.tsx`: The entry point for the React application.
-- **styles/**
-    - `index.css`: Global CSS styles for the application.
+- `index.css`: Global CSS styles for the application.
 
 **.gitignore**: Git ignore file for excluding files from version control.
 

@@ -28,6 +28,8 @@ export const AutoComplete = ({ items, onChange, value, error, loading, onClear, 
     const inputRef = useRef<HTMLInputElement>(null);
     const dropdownRef = useRef<HTMLUListElement>(null);
 
+
+
     useEffect(() => {
             setSelected(value);
             setSearchQuery(value?.id || '');
@@ -40,6 +42,7 @@ export const AutoComplete = ({ items, onChange, value, error, loading, onClear, 
             item?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
     }, [focusedIndex]);
+
 
 
     const handleKeyDown = useCallback((event: React.KeyboardEvent) => {
